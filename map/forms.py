@@ -3,7 +3,7 @@ from django.utils.translation   import ugettext_lazy as _
 
 from dash.base                  import DashboardPluginFormBase
 
-from bar.defaults               import DEFAULT_URL_VALUE
+from map.defaults               import DEFAULT_URL_VALUE
 
 class MapForm(forms.Form, DashboardPluginFormBase):
     """

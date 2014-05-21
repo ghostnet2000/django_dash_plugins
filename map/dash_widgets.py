@@ -1,4 +1,5 @@
 from django.template.loader   import render_to_string
+from django.shortcuts import render_to_response
 from django.conf              import settings
 
 from dash.base                import BaseDashboardPluginWidget
@@ -16,9 +17,8 @@ class BaseOpenLayersWidget(BaseDashboardPluginWidget):
         context = {
             'plugin': self.plugin,
             'MEDIA_URL': settings.MEDIA_URL,
-            'data_date': str(self.plugin.data.data_date),
-            'data_open': str(self.plugin.data.data_open),
+            'data_url': str(self.plugin.data.data_url),
             'width': self.get_width(),
             'height': self.get_height(),
         }
-        return render_to_string('bar/plugins/render.html', context)
+        return render_to_string('map/plugins/render.html', context)

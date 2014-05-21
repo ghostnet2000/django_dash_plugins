@@ -5,7 +5,7 @@ from dash.factory                               import plugin_factory, plugin_wi
 from dash.contrib.plugins.image.dash_plugins    import BaseImagePlugin
 
 from map.dash_widgets   import BaseOpenLayersWidget
-from map.forms          import OpenLayersForm
+from map.forms          import MapForm
 
 
 
@@ -14,7 +14,7 @@ class BaseOpenLayersPlugin(BaseDashboardPlugin):
     Base OpenLayers plugin.
     """
     name = _("openlayers")
-    group = _("internet")
+    group = _("mapping")
     form = MapForm
     html_classes = ['mapping']
 
@@ -36,8 +36,6 @@ sizes = (
     (5, 5)
 )
 
-plugin_factory(BaseOpenLayersPlugin, 'OpenLayers', sizes)
+plugin_factory(BaseOpenLayersPlugin, 'openlayers', sizes)
 
-plugin_widget_factory(BaseOpenLayersWidget, 'android', 'main', 'OpenLayers', sizes)
-
-
+plugin_widget_factory(BaseOpenLayersWidget, 'android', 'main', 'openlayers', sizes)

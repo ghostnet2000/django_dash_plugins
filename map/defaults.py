@@ -1,1 +1,1 @@
-DEFAULT_DATE_VALUE = "http://api.tiles.mapbox.com/v3/mapbox.natural-earth-hypso-bathy.jsonp"
+DEFAULT_URL_VALUE = "http://vmap0.tiles.osgeo.org/wms/vmap0"
