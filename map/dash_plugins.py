@@ -1,13 +1,9 @@
-from django.utils.translation                   import ugettext_lazy as _
-
-from dash.base                                  import plugin_registry, plugin_widget_registry, BaseDashboardPlugin
-from dash.factory                               import plugin_factory, plugin_widget_factory
-from dash.contrib.plugins.image.dash_plugins    import BaseImagePlugin
-
-from map.dash_widgets   import BaseOpenLayersWidget
-from map.forms          import MapForm
-
-
+from django.utils.translation import ugettext_lazy as _
+from dash.base import plugin_registry, plugin_widget_registry, BaseDashboardPlugin
+from dash.factory import plugin_factory, plugin_widget_factory
+from dash.contrib.plugins.image.dash_plugins import BaseImagePlugin
+from map.dash_widgets import BaseOpenLayersWidget
+from map.forms import MapForm
 
 class BaseOpenLayersPlugin(BaseDashboardPlugin):
     """

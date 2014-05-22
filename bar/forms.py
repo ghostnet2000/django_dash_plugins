@@ -1,7 +1,6 @@
-from django                     import forms
-from django.utils.translation   import ugettext_lazy as _
-
-from dash.base                  import DashboardPluginFormBase
+from django import forms
+from django.utils.translation import ugettext_lazy as _
+from dash.base import DashboardPluginFormBase
 
 #from bar.defaults               import DEFAULT_DATE_VALUE, DEFAULT_OPEN_VALUE
 

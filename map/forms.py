@@ -1,9 +1,7 @@
-from django                     import forms
-from django.utils.translation   import ugettext_lazy as _
-
-from dash.base                  import DashboardPluginFormBase
-
-from map.defaults               import DEFAULT_URL_VALUE
+from django import forms
+from django.utils.translation import ugettext_lazy as _
+from dash.base import DashboardPluginFormBase
+from map.defaults import DEFAULT_URL_VALUE
 
 class MapForm(forms.Form, DashboardPluginFormBase):
     """
@@ -18,4 +16,3 @@ class MapForm(forms.Form, DashboardPluginFormBase):
     title = forms.CharField(label=_("Title"), required=True)
     data_date = forms.CharField(label=_("Url"), required=True, initial=DEFAULT_URL_VALUE,
                                 widget=forms.widgets.Textarea)
-

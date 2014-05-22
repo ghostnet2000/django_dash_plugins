@@ -1,9 +1,7 @@
-from django.template.loader   import render_to_string
+from django.template.loader import render_to_string
 from django.shortcuts import render_to_response
-from django.conf              import settings
-
-from dash.base                import BaseDashboardPluginWidget
-
+from django.conf import settings
+from dash.base import BaseDashboardPluginWidget
 
 class BaseOpenLayersWidget(BaseDashboardPluginWidget):
     """
