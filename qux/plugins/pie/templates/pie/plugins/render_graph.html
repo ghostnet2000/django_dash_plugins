@@ -1,0 +1,31 @@
+
+<p>
+        <span id="chart-{{ plugin.html_id }}" ></span>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            var data = polyjs.data({
+                name: ['Lisa', 'Samson', 'Fravic', 'Zach', 'Raymond', 'Tim'],
+                pet: ['cat', 'dog', 'cat', 'cat', 'dog', 'none']
+            });
+            polyjs.chart({
+                title: 'Favourite Pets of Polychart Employees',
+                dom: 'chart-{{ plugin.html_id }}',
+                width: {{ width }} - 10,
+                height: {{ height }},
+                layer: {
+                    data: data,
+                    type: 'bar',
+                    y: 'count(name)',
+                    color: 'pet'
+                },
+                coord: {
+                    type: 'polar'
+                },
+                guide: {
+                    x: { position: "none", padding: 0 },
+                    y: { position: "none" }
+                }
+            })
+        });
+    </script>
+</p>

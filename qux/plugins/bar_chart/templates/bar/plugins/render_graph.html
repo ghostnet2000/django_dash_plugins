@@ -1,0 +1,22 @@
+  <p>
+        <span id="chart-{{ plugin.html_id }}" ></span>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            var data = polyjs.data({
+            'category': {{ category|safe }},
+            'number':  {{ number|safe }}
+            });
+            polyjs.chart({
+            layer: {
+            data: data,
+            type: 'bar',
+            x: 'category',
+            y: 'sum(number)'
+            },
+            dom: 'chart-{{ plugin.html_id }}',
+            width: '{{ width }}',
+            height: '{{ height }}'
+            });
+        });
+        </script>
+  </p>

@@ -3,24 +3,24 @@ from django.conf import settings
 from dash.base import BaseDashboardPluginWidget
 
 
-class BaseChartWidget(BaseDashboardPluginWidget):
+class BarChartWidget(BaseDashboardPluginWidget):
     """
     Base chart widget.
     """
     media_js = (
-        'static/js/d3.js',
+        'bar_chart/static/js/polychart2.standalone.js',
     )
 
     media_css = (
-        'static/css/style.css',
+        'bar_chart/static/css/style.css',
     )
 
     def render(self, request=None):
         context = {
             'plugin': self.plugin,
             'MEDIA_URL': settings.MEDIA_URL,
-            #'data_date': str(self.plugin.data.data_date),
-            #'data_open': str(self.plugin.data.data_open),
+            'category': str(self.plugin.data.category),
+            'number': str(self.plugin.data.number),
             'width': self.get_width(),
             'height': self.get_height(),
         }

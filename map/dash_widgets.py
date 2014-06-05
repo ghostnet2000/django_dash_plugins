@@ -9,6 +9,7 @@ class BaseOpenLayersWidget(BaseDashboardPluginWidget):
     """
     media_js = (
         'js/OpenLayers.js',
+        'jquery.ui.draggable.js',
     )
 
     def render(self, request=None):

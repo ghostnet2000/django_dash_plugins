@@ -1,0 +1,36 @@
+
+<p>
+        <span id="chart-{{ plugin.html_id }}" ></span>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            var djData = {
+                'Date': [ 1, 2, 3, 4],
+                'Open': [ 1, 2, 3, 4]
+            }
+            var polyjsdata = polyjs.data(djData)
+            var spec = {
+                title: "{{ plugin.data.title }}",
+                layer: {
+                    data: polyjsdata,
+                    type: 'line',
+                    x: 'Date',
+                    y: 'Open',
+                    size: {'const': 3}
+                },
+                guide: {
+                    x: {
+                        numticks: 10
+                    },
+                    y: {
+                        min: 0,
+                        max: 10
+                    }
+                },
+                dom: 'chart-{{ plugin.html_id }}',
+                width: {{ width }},
+                height: {{ height }}
+            }
+            polyjs.chart(spec);
+        });
+    </script>
+</p>
