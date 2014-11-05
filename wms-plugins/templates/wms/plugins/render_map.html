@@ -1,0 +1,28 @@
+<p>
+      <span style="{{ width }}; {{ height }}" id="{{ plugin.html_id }}"></span>
+      <script type="text/javascript">
+        $(document).ready(function(){
+            var layers = [
+              new ol.layer.Tile({
+                source: new ol.source.MapQuest({layer: 'sat'})
+              }),
+              new ol.layer.Image({
+                extent: [-13884991, 2870341, -7455066, 6338219],
+                source: new ol.source.ImageWMS({
+                  url: 'http://demo.opengeo.org/geoserver/wms',
+                  params: {'LAYERS': 'topp:states'},
+                  serverType: 'geoserver'
+                })
+              })
+            ];
+            var map = new ol.Map({
+              layers: layers,
+              target: '{{ plugin.html_id }}',
+              view: new ol.View({
+                center: [-10997148, 4569099],
+                zoom: 4
+              })
+            });
+          });
+    </script>
+</p>
