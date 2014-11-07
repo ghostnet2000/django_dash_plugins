@@ -17,14 +17,12 @@ presented below.
 
 -  (view dashboard mode):
 
-  .. image:: docs/_static/screen.png
+  .. image:: docs/static/screen.png
         :align: center
-        :width: 900px
+        :width: 850px
 
 
 
 License
 ============================================
-- The the `ol3.js`_ (JavaScript library) is
-  licensed under `<https://github.com/openlayers/ol3/blob/master/LICENSE.md>`_.
-
+- test
