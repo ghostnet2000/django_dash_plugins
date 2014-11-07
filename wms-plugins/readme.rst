@@ -25,4 +25,6 @@ presented below.
 
 License
 ============================================
-- test
+- The the `ol3.js`_ (JavaScript library) is
+  licensed under `<https://github.com/openlayers/ol3/blob/master/LICENSE.md>`_.
+
